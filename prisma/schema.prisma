@@ -1,0 +1,34 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model shorts {
+  id                String   @id @default(auto()) @map("_id") @db.ObjectId
+  videoId           String?   
+  title             String?
+  googleDriveLink   String?
+  scriptHindi       String?
+  scriptEnglish     String?
+  createdAt         DateTime? @default(now())
+  updatedAt         DateTime? @updatedAt
+}
+
+model products{
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  skuId         String?   
+  productName   String?
+  description   String?
+  category      String?
+  mrp           Int?
+  price         Int
+  gstPercentage Float?
+  moq           Int      @default(1)
+  createdAt     DateTime? @default(now())
+  updatedAt     DateTime? @updatedAt
+}

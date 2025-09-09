@@ -1,0 +1,26 @@
+runtime: nodejs20
+instance_class: F2
+env: standard
+
+env_variables:
+  NODE_ENV: 'production'
+  NPM_CONFIG_LEGACY_PEER_DEPS: "true"
+
+handlers:
+- url: /.*
+  script: auto
+
+#Testing-server(Work only on this)-------->
+# service: pre-production
+
+#Live server for old app(dont touch this untill said)----->
+# service: default
+
+#live server(Dont touch this any way)---------->
+# service: production
+
+# new service deployed on:13Mar/25Mar
+# service: production-v2
+
+#Rag pipline server---------->
+service: rag-pipeline

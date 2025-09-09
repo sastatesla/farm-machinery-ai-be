@@ -1,0 +1,38 @@
+# This file tells gcloud which files and directories to **ignore** during deployment
+
+# Ignore Node modules (they will be installed on App Engine)
+node_modules/
+
+# Ignore local dependency lock files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+
+# Ignore logs
+*.log
+logs/
+*.tmp
+
+# Ignore git files
+.git
+.gitignore
+
+# Ignore build artifacts (if not needed for runtime)
+dist/
+build/
+
+# Ignore coverage reports
+coverage/
+.nyc_output/
+
+# Ignore test files
+tests/
+__tests__/
+*.spec.js
+*.test.js
+
+# Ignore IDE/project files
+.vscode/
+.idea/
+*.iml
