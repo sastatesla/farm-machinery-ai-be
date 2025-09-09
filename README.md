@@ -8,7 +8,7 @@ An AI-powered **Conversational RAG system** that helps farmers troubleshoot farm
 - Provides **DIY repair videos** and **spare part recommendations** within chat.
 
 ## Tech Stack
-- **LLM:** Google Gemini
+- **LLM:** Google Gemini 2.5 flash
 - **Framework:** Node.js (ESM) + LangChain
 - **Vector DB:** Pinecone
 - **Embeddings:** Gemini Embeddings
